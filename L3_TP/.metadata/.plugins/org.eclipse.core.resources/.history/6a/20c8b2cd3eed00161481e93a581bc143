@@ -18,8 +18,7 @@ public class Exo5_7 {
 		int count = 0;
 		System.out.println("\n\nSummary :");
 		for(IntQuestion question : questions){
-			int j = i+1;
-			System.out.print(j+ ") " + question.getQuestion() + " = " + question.getCorrectAnswer());
+			System.out.print(i+ ") " + question.getQuestion() + " = " + question.getCorrectAnswer());
 			if(answer[i] == question.getCorrectAnswer()){
 				System.out.println("  Correct!");
 				count += 10;
