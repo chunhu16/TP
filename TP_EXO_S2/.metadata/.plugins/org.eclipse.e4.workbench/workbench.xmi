@@ -7,7 +7,7 @@
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
-    <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;show_in_time/>"/>
+    <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;show_in_time>&#xA;&lt;id IMemento.internal.id=&quot;org.eclipse.egit.ui.RepositoriesView&quot;/>&#xA;&lt;/show_in_time>"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1485727299271"/>
     <tags>topLevel</tags>
@@ -75,15 +75,14 @@
               <children xsi:type="basic:PartStack" xmi:id="_gi3O0-ZuEeawQaD0Ph62gQ" elementId="left" containerData="6000" selectedElement="_gi3O1OZuEeawQaD0Ph62gQ">
                 <tags>org.eclipse.e4.primaryNavigationStack</tags>
                 <tags>active</tags>
-                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_gi3O1OZuEeawQaD0Ph62gQ" elementId="org.eclipse.jdt.ui.PackageExplorer" ref="_gihQkOZuEeawQaD0Ph62gQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_gi3O1eZuEeawQaD0Ph62gQ" elementId="org.eclipse.jdt.ui.TypeHierarchy" toBeRendered="false" ref="_gijs0OZuEeawQaD0Ph62gQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_gi3O1uZuEeawQaD0Ph62gQ" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_gikT4OZuEeawQaD0Ph62gQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_gi3O1-ZuEeawQaD0Ph62gQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" toBeRendered="false" ref="_gikT4eZuEeawQaD0Ph62gQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_gi3O2OZuEeawQaD0Ph62gQ" elementId="org.eclipse.jdt.junit.ResultView" toBeRendered="false" ref="_gi0ykeZuEeawQaD0Ph62gQ"/>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_gi3O2eZuEeawQaD0Ph62gQ" elementId="org.eclipse.egit.ui.RepositoriesViewMStack" toBeRendered="false" containerData="4000">
-                <children xsi:type="advanced:Placeholder" xmi:id="_gi3O2uZuEeawQaD0Ph62gQ" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_gi0ykOZuEeawQaD0Ph62gQ"/>
+              <children xsi:type="basic:PartStack" xmi:id="_gi3O2eZuEeawQaD0Ph62gQ" elementId="org.eclipse.egit.ui.RepositoriesViewMStack" containerData="4000" selectedElement="_gi3O2uZuEeawQaD0Ph62gQ">
+                <children xsi:type="advanced:Placeholder" xmi:id="_gi3O2uZuEeawQaD0Ph62gQ" elementId="org.eclipse.egit.ui.RepositoriesView" ref="_gi0ykOZuEeawQaD0Ph62gQ"/>
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_gi3O2-ZuEeawQaD0Ph62gQ" containerData="7500">
@@ -257,8 +256,14 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_gi0ykOZuEeawQaD0Ph62gQ" elementId="org.eclipse.egit.ui.RepositoriesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Git Repositories" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/repo_rep.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.egit.ui.internal.repository.RepositoriesView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.egit.ui"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Git</tags>
+      <menus xmi:id="_4TmJQO02EeaVEKTEGQ1K1Q" elementId="org.eclipse.egit.ui.RepositoriesView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_4TmJQe02EeaVEKTEGQ1K1Q" elementId="org.eclipse.egit.ui.RepositoriesView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_gi0ykeZuEeawQaD0Ph62gQ" elementId="org.eclipse.jdt.junit.ResultView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="JUnit" iconURI="platform:/plugin/org.eclipse.jdt.junit/icons/full/eview16/junit.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.junit.ui.TestRunnerViewPart"/>
@@ -285,7 +290,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_gWj4MOZuEeawQaD0Ph62gQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_PPDDQO01EeaLXYOWQ5xCGQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_flg15uZuEeawQaD0Ph62gQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0AvM8O02EeaVEKTEGQ1K1Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_flg15uZuEeawQaD0Ph62gQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_gWkfQOZuEeawQaD0Ph62gQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -306,7 +311,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_gWlGUOZuEeawQaD0Ph62gQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_PPIi0O01EeaLXYOWQ5xCGQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_flfAl-ZuEeawQaD0Ph62gQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0A0sgO02EeaVEKTEGQ1K1Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_flfAl-ZuEeawQaD0Ph62gQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_gWlGUeZuEeawQaD0Ph62gQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2160,7 +2165,7 @@
   <addons xmi:id="_fkce0eZuEeawQaD0Ph62gQ" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_fkce0uZuEeawQaD0Ph62gQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_fkoE8OZuEeawQaD0Ph62gQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_zlUcQe02EeaVEKTEGQ1K1Q" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_flSMQOZuEeawQaD0Ph62gQ" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_flSMQeZuEeawQaD0Ph62gQ" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

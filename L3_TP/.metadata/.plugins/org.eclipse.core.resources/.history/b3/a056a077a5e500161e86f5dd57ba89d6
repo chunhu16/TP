@@ -1,0 +1,35 @@
+
+public class Exo5_3 {
+
+	public static void main(String[] args) {
+		PairOfDice dice = new PairOfDice();
+		StatCalc stat;
+		System.out.println("Dices          Average          Standard Deviation");
+		for(int i = 2 ; i < 13 ; i++){
+			stat = new StatCalc();
+			runTenThousandTime(i, dice, stat);
+			String res = "";
+			try{
+			res += " " + i + "            ";
+			res += stat.getMean() + "               ";
+			double d = stat.getStandardDeviation();
+			int intPart = (int) d;
+			double decimalPart = d - intPart;
+			double standardVariation = intPart + (double)(((int)(decimalPart*10000))/10000);
+			res += standardVariation;
+			} catch (Exception ex){
+				res += ex.getMessage() + "\nError at total on dice ";
+				res += i;
+			}
+			System.out.println(res);
+		}
+
+	}
+	private static void runTenThousandTime(int target, PairOfDice dice, StatCalc stat){
+		for (int i = 0 ; i < 10000 ; i++){
+			int count = dice.howMany(target);
+			stat.enter(count);
+			dice.roll();
+		}
+	}
+}

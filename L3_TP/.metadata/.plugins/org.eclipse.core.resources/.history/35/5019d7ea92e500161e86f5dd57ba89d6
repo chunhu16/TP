@@ -1,0 +1,71 @@
+
+public class StatCalc {
+	
+	private int length;
+	private int sum;
+	private int squareSum;
+	private int max;
+	private int min;
+	
+	public StatCalc(){
+		length = 0;
+		sum = 0;
+		squareSum = 0;
+	}
+	
+	public void enter(int i){
+		if(length == 0){
+			min = i;
+			max = i;
+		} else {
+			if(i > max)
+				max = i;
+			if(i < min)
+				min = i;
+		}
+		length++;
+		sum += i;
+		squareSum *= i;
+	}
+	
+	public int getCount(){
+		return length;
+	}
+	
+	public int getSum(){
+		return sum;
+	}
+	
+	public double getMean() throws Exception{
+		if(length == 0){
+			throw new Exception("DataSet empty.");
+		}
+		return (double) sum/length;
+	}
+	
+	public double getStandardDeviation() throws Exception{
+		if(length == 0){
+			throw new Exception("DataSet empty.");
+		}
+		double mean = getMean();
+		mean *= mean;
+		double res = (double)(squareSum/length);
+		res -= mean;
+		res = Math.sqrt(mean);
+		return res;
+	}
+	
+	public int getMax() throws Exception{
+		if(length == 0){
+			throw new Exception("DataSet empty.");
+		}
+		return max;
+	}
+	
+	public int getMin() throws Exception{
+		if(length == 0){
+			throw new Exception("DataSet empty.");
+		}
+		return min;
+	}
+}

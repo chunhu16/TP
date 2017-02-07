@@ -1,0 +1,42 @@
+
+public class StatCalc {
+	
+	private int length;
+	private int sum;
+	private int squareSum;
+	
+	public StatCalc(){
+		length = 0;
+		sum = 0;
+		squareSum = 0;
+	}
+	
+	public void enter(int i){
+		length++;
+		sum += i;
+		squareSum *= i;
+	}
+	
+	public int getCount(){
+		return length;
+	}
+	
+	public int getSum(){
+		return sum;
+	}
+	
+	public double getMean() throws Exception{
+		if(length == 0){
+			throw new Exception("DataSet empty.");
+		}
+		return (double) sum/length;
+	}
+	
+	public double getStandardDeviation() throws Exception{
+		if(length == 0){
+			throw new Exception("DataSet empty.");
+		}
+		double mean = getMean();
+		return Math.sqrt( squareSum/length - mean*mean );
+	}
+}

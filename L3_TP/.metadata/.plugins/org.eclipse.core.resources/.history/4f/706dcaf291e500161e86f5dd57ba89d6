@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Exo5_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StatCalc stat = new StatCalc();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the numbers one by one (to stop enter 0)");
+		int entry = scan.nextInt();
+		while(entry != 0){
+			stat.enter(entry);
+			entry = scan.nextInt();
+		}
+		String res = "Length : "+ stat.getCount();
+		try{
+			res += "Sum : " + stat.getSum();
+			res += "Mean : " + stat.getMean();
+			res += "Standard Deviation Variation : " + stat.getStandardDeviation();
+			res += "Max : " + stat.getMax();
+			res += "Min : " + stat.getMin();
+		} catch (Exception ex){
+			res = ex.getMessage();
+		}
+		System.out.println(res);
+	}
+
+}
