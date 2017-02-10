@@ -1,7 +1,12 @@
-package exo5_7;
+package exo5_7.Main;
 
 import java.util.Random;
 import java.util.Scanner;
+
+import exo5_7.lib.AdditionQuestion;
+import exo5_7.lib.SubstractionQuestion;
+import exo5_7_interf.IntQuestion;
+
 
 public class Exo5_7 {
 	

@@ -1,5 +1,6 @@
-package exo5_7;
+package exo5_7.lib;
 
+import exo5_7_interf.IntQuestion;
 
 public class AdditionQuestion implements IntQuestion {
 
